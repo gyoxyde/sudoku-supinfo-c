@@ -15,15 +15,14 @@ void start_game() {
         display_grid(&grid);
 
         int row, col, value;
-        printf("Entrez la ligne (1-9), la colonne (1-9) et la valeur (1-9): ");
+        printf("Enter the row 1-9, column 1-9 and value 1-9 ");
         scanf("%d %d %d", &row, &col, &value);
 
         if (is_valid(&grid, row - 1, col - 1, value)) {
             grid.cells[row - 1][col - 1] = value;
         } else {
-            printf("Valeur invalide ! Réessayez.\n");
+            printf("Invalid value\n");
         }
     }
-
-    printf("Félicitations, vous avez complété la grille !\n");
+    printf("Well, you have completed the grid !\n");
 }
